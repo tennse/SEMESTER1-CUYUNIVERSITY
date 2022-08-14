@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title>SESI-5-CUYUNIVERSITY</title>
+</head>
+<style>
+    #root {
+        background-color: gray;
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <input type="text" placeholder="username" id="usernameInput" />
+        <input type="password" id="passwordInput" />
+        <button onclick="onLogin()" id="loginButton">LOGIN</button>
+        <button onclick="onLogout()" id="logoutButton">LOGOUT</button>
+        <button onclick="register()" id="registButton">REGISTER</button>
+        <br />
+
+        <!-- role 1 -->
+        <div id="captain">
+            <img src="luffy.jpg" />
+            <h1>Anda Telah Login Sebagai VIP</h1>
+        </div>
+        <!-- role 2 -->
+        <div id="wakil">
+            <img src="zoro.jpg" width="200px" height="300px" />
+            <h1>Anda Telah Login Sebagai Member</h1>
+        </div>
+        <div id="register" class="registerFrom">
+            <input type="text" placeholder="username" id="usernameReg" />
+            <input type="text" placeholder="password" id="passwordReg" />
+            <button id="daftarMember" onclick="onDaftarMem()">DAFTAR MEMBER</button>
+            <button id="daftarVip" onclick="onDaftarVip()">DAFTAR VIP</button>
+
+        </div>
+    </div>
+
+    <script type="application/javascript">
+        let usernameInput = document.getElementById("usernameInput");
+        let passwordInput = document.getElementById('passwordInput');
+        let captain = document.getElementById('captain');
+        let wakil = document.getElementById('wakil')
+        let loginButton = document.getElementById('loginButton')
+        let logoutButton = document.getElementById('logoutButton')
+        let registButton = document.getElementById('registButton')
+        let usernameReg = document.getElementById('usernameReg')
+        let passwordReg = document.getElementById('passwordReg')
+        let daftarMember = document.getElementById('daftarMember')
+        let daftarVip = document.getElementById('daftarVip')
+        captain.style.display = "none";
+        wakil.style.display = "none";
+        logoutButton.style.display = "none";
+        daftarMember.style.display = "none";
+        daftarVip.style.display = "none";
+        usernameReg.style.display = "none";
+        passwordReg.style.display = "none";
+
+
+        function register() {
+            daftarMember.style.display = "block";
+            daftarVip.style.display = "block";
+            usernameReg.style.display = "block";
+            passwordReg.style.display = "block";
+            usernameInput.style.display = "none";
+            passwordInput.style.display = "none";
+            loginButton.style.display = "none";
+            registButton.style.display = "none";
+
+        }
+
+        function onDaftarMem() {
+            alert('Anda Telah Terdaftar Sebagai Member');
+            localStorage.setItem("username", usernameReg.value);
+            localStorage.setItem("role", "member");
+            logoutButton.style.display = "none";
+            daftarMember.style.display = "none";
+            daftarVip.style.display = "none";
+            usernameReg.style.display = "none";
+            passwordReg.style.display = "none";
+            usernameInput.style.display = "block";
+            passwordInput.style.display = "block";
+            loginButton.style.display = "block";
+            registButton.style.display = "block";
+        }
+
+        function onDaftarVip() {
+            alert('Anda Telah Terdaftar Sebagai VIP');
+            localStorage.setItem("username", usernameReg.value);
+            localStorage.setItem("role", "vip");
+            logoutButton.style.display = "none";
+            daftarMember.style.display = "none";
+            daftarVip.style.display = "none";
+            usernameReg.style.display = "none";
+            passwordReg.style.display = "none";
+            usernameInput.style.display = "block";
+            passwordInput.style.display = "block";
+            loginButton.style.display = "block";
+            registButton.style.display = "block";
+        }
+
+        function onLogin() {
+            // localStorage.setItem("username", usernameReg.value);
+            logoutButton.style.display = "block"
+            if (usernameInput.value == usernameReg.value && passwordInput.value == passwordReg.value && localStorage.getItem('role') == "vip") {
+                wakil.style.display = "none"
+                captain.style.display = "block"
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                loginButton.style.display = "none"
+                registButton.style.display = "none"
+            } else if (usernameInput.value == usernameReg.value && passwordInput.value == passwordReg.value && localStorage.getItem('role') == "member") {
+                captain.style.display = "none"
+                wakil.style.display = "block"
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                loginButton.style.display = "none"
+                registButton.style.display = "none"
+            } else {
+                alert('Maaf, Mungkin anda belum terdaftar');
+                location.reload();
+            }
+        }
+
+        if (localStorage.getItem('username')) {
+            loginbutton.style.display = "none";
+            logoutbutton.style.display = "block";
+
+            if (localStorage.getItem('role') == "vip") {
+                captain.style.display = "block";
+                wakil.style.display = "none";
+
+            } else if (localStorage.getItem('role') == "member") {
+                wakil.style.display = "block";
+                captain.style.display = "none";
+            }
+        }
+
+
+
+        // fungsi logout
+        function onLogout() {
+            localStorage.clear();
+            location.reload();
+        }
+
+    </script>
+</body>
+
+</html>
