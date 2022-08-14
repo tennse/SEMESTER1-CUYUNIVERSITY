@@ -1,0 +1,298 @@
+><html>
+
+<head>
+    <title>BELAJAR</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="index.html" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="aboutme.html" class="a-navbar">ABOUT ME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="contact.html" class="a-navbar">CONTACT ME</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR SELESAI -->
+
+        <!-- CONTENT 1 -->
+        <div class="container-contentaboutme">
+            <table border="1" class="table1">
+                <thead>
+                    <tr>
+                        <td>MONKEY D. LUFFY</td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RORONOA ZORO</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>NAMI</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>USSOP</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>SANJI</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>TONY TONY CHOPER</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>NICO ROBIN</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>FRANKY</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>BROOK</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>JINBE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h1 class='footer-1'>SAYA LAGI BELAJAR DI CUYUNIVERSITY</h1>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+</body>
+
+</html>
+<html>
+
+<head>
+    <title>BELAJAR</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="index.html" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="aboutme.html" class="a-navbar">ABOUT ME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="contact.html" class="a-navbar">CONTACT ME</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR SELESAI -->
+
+        <!-- CONTENT 1 -->
+        <div class="container-contentcontact">
+            <a href="https://www.instagram.com/seinn.hs/" class="instagramcontact">
+                <img src="assets/img/instagram.png" class="logo1" />
+            </a>
+            <a href="https://www.tiktok.com/@pengengaming" class="tiktokcontact">
+                <img src="assets/img/tiktok.png" class="logo2"/>
+            </a>
+
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h1 class='footer-1'>SAYA LAGI BELAJAR DI CUYUNIVERSITY</h1>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+</body>
+
+</html>
+<html>
+
+<head>
+    <title>BELAJAR</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="index.html" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="aboutme.html" class="a-navbar">ABOUT ME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="contact.html" class="a-navbar">CONTACT ME</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR SELESAI -->
+
+        <!-- CONTENT 1 -->
+        <div class="container-content">
+            <a href="https://youtube.com" class="content-1">
+                <img src="download.png" class="img-content" />
+                <p>STRAWHAT PIRATE</p>
+            </a>
+
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h1 class='footer-1'>SAYA LAGI BELAJAR DI CUYUNIVERSITY</h1>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+</body>
+
+</html>
+# SEMESTER1-CUYUNIVERSITY
+‣䕓䕍呓剅ⴱ啃啙䥎䕖卒呉ਖ਼
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.a-navbar {
+    color: white;
+    text-decoration: none;
+}
+
+.container-navbar {
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+}
+
+.ul-navbar {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content-1 {
+    background-color: black;
+    text-decoration: none;
+    font-size: 20;
+    color: white;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    ;
+}
+
+.container-content {
+    list-style-type: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+
+
+.li-navbar {
+    list-style-type: none;
+    padding: 5px;
+    margin: 7px;
+    color: white;
+    font-size: 20px;
+}
+
+.li-navbar:hover {
+    background-color: red;
+    transition: .2s ease-in-out;
+    transition-delay: .2s;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-1 {
+    color: white
+}
+
+.table1 {
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contentaboutme {
+
+    border-style: solid;
+}
+
+.container-contentcontact {
+    display: flex;
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo1 {
+    width: 20vh;
+    display: flexbox;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.logo2 {
+    width: 35vh;
+    justify-content: center;
+    align-items: center;
+    display: flexbox;
+}
