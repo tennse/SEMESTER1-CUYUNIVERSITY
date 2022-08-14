@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <title>CUYUNIVERSITY SESI 6</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a onclick="reRender()" id="home">HOME</a>
+            <a onclick="darkMode()" id="mode">MODE-DARK</a>
+            <a onclick="girlMode()" id="girl">MODE-GIRL</a>
+            <a onclick="boyMode()" id="boy">MODE-BOY</a>
+        </nav>
+        <H1>SESI 6</H1>
+        <p class="info" id="info"></p>
+    </div>
+    <!-- initializing function -->
+    <script>
+        let body = document.body;
+        let info = document.getElementById('info')
+        let mode = document.getElementById('mode')
+        let home = document.getElementById('home')
+        let girl = document.getElementById('girl')
+        let boy = document.getElementById('boy')
+
+        let darkLimit = 5;
+        let darkCounter = 0;
+        let darkRemainingLeft;
+        let girlLimit = 5;
+        let girlCounter = 0;
+        let girlRemainingLeft;
+        let boyLimit = 5;
+        let boyCounter = 0;
+        let boyRemainingLeft;
+
+       
+        function darkMode() {  
+            if (darkRemainingLeft == 1) {
+                info.textContent = `Darkmode sudah habis`;
+                home.textContent = `Restart`;
+                mode.style.display = "none";
+                return;
+            }
+
+            darkCounter += 1;
+            darkRemainingLeft = darkLimit - darkCounter;
+            body.classList.toggle("dark");
+            
+            if (darkRemainingLeft % 2 == 0) {
+                mode.textContent = "MODE-LIGHT"
+            } else {
+                mode.textContent = "MODE-DARK"
+                
+            }
+
+
+            // render ke info element
+            info.textContent = `Darkmode telah terpakai ${darkCounter}x, tersisa ${darkRemainingLeft}`
+
+            
+        }
+        function reRender() {
+            location.reload();
+        }
+
+        // girl mode
+        function girlMode() {  
+            if (girlRemainingLeft == 1) {
+                info.textContent = `girlmode sudah habis`;
+                home.textContent = `Restart`;
+                girl.style.display = "none";
+                return;
+            }
+
+            girlCounter += 1;
+            girlRemainingLeft = girlLimit - girlCounter;
+            body.classList.toggle("girl");
+            
+            if (girlRemainingLeft % 2 == 0) {
+                girl.textContent = "MODE-LIGHT"
+            } else {
+                girl.textContent = "MODE-GIRL"
+                
+            }
+
+
+            // render ke info element
+            info.textContent = `girlmode telah terpakai ${girlCounter}x, tersisa ${girlRemainingLeft}`
+
+            
+        }
+        function reRender() {
+            location.reload();
+        }
+
+        // boy
+        function boyMode() {  
+            if (boyRemainingLeft == 1) {
+                info.textContent = `Boymode sudah habis`;
+                home.textContent = `Restart`;
+                boy.style.display = "none";
+                return;
+            }
+
+            boyCounter += 1;
+            boyRemainingLeft = boyLimit - boyCounter;
+            body.classList.toggle("boy");
+            
+            if (boyRemainingLeft % 2 == 0) {
+                boy.textContent = "MODE-Light"
+            } else {
+                boy.textContent = "MODE-BOY"
+                
+            }
+
+
+            // render ke info element
+            info.textContent = `boymode telah terpakai ${boyCounter}x, tersisa ${boyRemainingLeft}`
+
+            
+        }
+        function reRender() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
